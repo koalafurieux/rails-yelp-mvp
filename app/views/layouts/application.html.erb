@@ -7,9 +7,28 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- these line for detecting device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-text">
+        TripAdvisorCopyCat
+      </span>
+      <ul class="nav navbar-nav d-flex flex-row">
+        <li class="p-1"><a href="/restaurants" class="btn btn-light">Home</a></li>
+        <li class="p-1"><a href="/restaurants/new" class="btn btn-light">Add New Restaurant</a></li>
+      </ul>
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
